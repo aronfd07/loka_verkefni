@@ -1,0 +1,71 @@
+.topmenu {
+    background-color: #B99E66;
+    border: 2px solid lightgray;
+    display: flex;
+    flex-flow: column;
+    position: fixed;
+    top: 3rem;
+    right: -50rem;
+    width: 80%;
+    z-index: 99;
+    padding: 2rem;
+    transition: all .5s ease-in;
+    margin-bottom: 0px;
+}
+#toggle:checked ~ .topmenu {
+    right: 0;
+    transition: all .5 ease-in;
+}
+
+.topmenu a {
+    display: block;
+    color: var(--nc-lk-tx);
+    padding: .5rem;
+    text-decoration: none;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.socials {
+    display: flex;
+    justify-content: center; /* Align items horizontally at the center */
+}
+
+.socials a {
+    margin: 0 10px; /* Adjust the margin as needed */
+}
+
+.menuinput{
+    display: none;
+}
+
+.menulabel {
+    font-size: 2rem;
+    position: fixed;
+    top: .5rem;
+    right: 1rem;
+    z-index: 999999;
+}
+
+.menulabel:hover {
+    cursor: pointer;
+}
+
+@media screen and (min-width:48em) {
+    .topmenu {
+        position: sticky;
+        top: 0;
+        flex-flow: row;
+        max-width: 80rem;
+        margin: auto;
+        margin-bottom: none;
+        right: 0;
+        width: 100%;
+        padding: 0;
+        transition: none;
+    }
+    
+    .menulabel {
+        display: none;
+    }
+}

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="is">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="HTML og CSS grunnur">
+  <meta name="author" content="GJG">
+  <title>Verkefni 1. Vinnurammi</title>
+  <!-- <link rel="stylesheet" href="css/2.grid.css">
+  <link rel="stylesheet" href="css/1.new.css">
+  <link rel="stylesheet" href="css/table.css">
+  <link rel="stylesheet" href="css/custom.css">
+  <link rel="stylesheet" href="css/4.nav.css">
+  <link rel="stylesheet" href="css/harmonika.css">
+  <link rel="stylesheet" href="css/3.icomoon.css">
+  <link rel="stylesheet" href="css/animation.css"> -->
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="icon" type="image/svg" href="images/rwd-icon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <nav class="topnav">
+    <input type="checkbox" class="menuinput" id="toggle">
+    <label for="toggle" class="menulabel"> &#9776; </label>
+      <section class="topmenu">
+          <a href="index.html"><span class="icon-home"></span> Forsíða</a>
+          <a href="solusida.html"><span class="icon-coin-dollar"> </span>Sölusíða</a>
+          <a href="innskraning.html"><span class="icon-user"> </span>Innskráning</a>
+          </div>
+      </section>
+  </nav>
+
+  <header>
+    <section class="landing container col-2_header">
+      <div class="top-margin">
+        <div class="logo-pop"><span class="icon-teikning-logo"></span></div>
+        <h1 class="">The Legend of Zelda: Tears of the Kingdom<br>Og Breath of the Wild</h1>
+      </div>
+      <div>
+        <div class="logo-slide"><img class="" src="images/Totk - logo no background.png"></div>
+      </div>
+    </section>
+  </header>
+
+  <div class="scrolling-text-container">
+    <div class="scrolling-text col-3 col-gap">
+      <div>An evocative and exhilarating open-world adventure game.</div>
+      <div>It might be the greatest game ever created.</div>
+      <div>Ignore everything you know about The Legend of Zelda games</div>
+    </div>
+  </div>
+  
+
+  <div class="background_banner">
+    <section class="col-3 container">
+      <div class="value">
+        <h1 id="percentage1">0%</h1>
+        <h3>Enthralling Storyline</h3>
+        <p>"The Legend of Zelda: Tears of the Kingdom" captivates players with its rich narrative, weaving together themes of courage, friendship, and sacrifice as they journey through the land of Hyrule.</p>
+      </div>
+      <div class="value">
+        <h1 id="percentage2">0%</h1>
+        <h3>Breathtaking Environments</h3>
+        <p>From lush forests to treacherous mountains, the game's diverse landscapes offer a visually stunning backdrop for players to explore and uncover hidden secrets.</p>
+      </div>
+      <div class="value">
+        <h1 id="percentage3">0%</h1>
+        <h3>Engaging Gameplay</h3>
+        <p>With challenging puzzles, epic boss battles, and rewarding side quests, "Tears of the Kingdom" delivers an engaging gameplay experience that keeps players hooked from start to finish.</p>
+      </div>
+    </section>
+  </div>
+  
+  <script>
+    // Function to animate counting up to the target percentage
+    function animateValue(id, start, end, duration) {
+      var range = end - start;
+      var current = start;
+      var increment = range > 0 ? 1 : -1; // Adjusted increment calculation
+      var stepTime = Math.abs(Math.floor(duration / range));
+      var obj = document.getElementById(id);
+      var timer = setInterval(function() {
+        current += increment;
+        obj.textContent = current + "%";
+        if (current == end) {
+          clearInterval(timer);
+        }
+      }, stepTime);
+    }
+  
+    // Call the animateValue function for each percentage
+    animateValue("percentage1", 0, 85, 2000); // Enthralling Storyline
+    animateValue("percentage2", 0, 90, 2000); // Breathtaking Environments
+    animateValue("percentage3", 0, 80, 2000); // Engaging Gameplay
+  </script>  
+
+<main>
+  <div>  
+    <section class="container col-2">
+      <div>
+        <section>
+          <h1>Who we are</h1>
+          Nintendo's mission is to put smiles on the faces of everyone we touch. We do so by creating new surprises for people across the world to enjoy together. We've forged our own path since 1889, when we began making hanafuda playing cards in Kyoto, Japan. Today, we’re fortunate to be able to share our characters, ideas, and worlds through the medium of video games and the entertainment industry. Nintendo of America, established in 1980 and based in Redmond, Wash., is a wholly owned subsidiary of Nintendo Co., Ltd. We are committed to delivering best-in-class products and services to our customers and to investing in the well-being of our employees as part of the global Nintendo family.
+          <br>
+          Nintendo's dedication to spreading joy stretches back to its roots in 1889 when it first started crafting hanafuda playing cards in Kyoto, Japan. Since then, our journey has been one of innovation and creativity, constantly seeking new ways to delight people around the globe. Today, our legacy lives on through the captivating worlds we create in video games and entertainment.
+          <br>
+          Established in 1980, Nintendo of America, headquartered in Redmond, Wash., stands as a testament to our commitment to delivering excellence. As a wholly owned subsidiary of Nintendo Co., Ltd., we strive to provide unparalleled products and services to our customers. Yet, our dedication doesn't stop there. We also prioritize the well-being of our employees, recognizing them as integral members of the global Nintendo family.
+          <br>
+          As we continue to forge ahead, we remain steadfast in our mission to bring smiles to the faces of everyone we touch, fostering connections and shared moments of joy that transcend boundaries and generations. With each new surprise we create, we reaffirm our pledge to spread happiness through play.
+         
+        </section>
+      </div>
+
+      <div>
+        <h1>Um mig <br> (Aron Frosti Davíðsson)</h1>
+        <figure>
+          <img src="images/litil_mynd_af_afd.jpg">
+        </figure>
+
+        <section>
+          Ég útskrifaðist sem viðskiptafræðingur frá Háskóla Íslands vorið 2007 og hef síðan þá starfað hjá ABCD. Þar hef ég séð um bókun, afstemmingar, uppgjör og greiðslu 
+          reikninga og hef því öðlast umtalsverða reynslu af þessum verkefnum. Ég hef einnig verið staðgengill aðalbókara og hef meðal annars í samráði við minn yfirmann unnið
+          við uppgjör virðisaukskatts og gengið frá skýrslum til skattstjóra, aðstoðað við undirbúning og gerð ársreikninga og haft umsjón með skýrslum og upplýsingum úr bókhaldi 
+          fyrir stjórnendur fyrirtækisins. Ég hef ekki reynslu af fjárhagsáætlanagerð frá starfi en ég tel mig þó hafa góðan grunn til að byggja á frá námi. 
+        </section>
+      </div>
+    
+    </section>
+
+    <hr>
+
+<footer class="container col-3">
+  <nav>
+    <ul>
+      <li><i class="icon-link"></i> Eveniet ducimus pariatur voluptate</li>
+      <li><i class="icon-link"></i> Vitae animi, sed provident fuga</li>
+      <li><i class="icon-link"></i> Lorem ipsum dolor sit amet consectetur</li>
+      <li><i class="icon-link"></i> Provident sit aliquid a consequuntur</li>
+    </ul>
+  </nav>
+  <nav>
+    <ul>
+      <li><i class="icon-link"></i> Eveniet ducimus pariatur voluptate</li>
+      <li><i class="icon-link"></i> Vitae animi, sed provident fuga</li>
+      <li><i class="icon-link"></i> Lorem ipsum dolor sit amet consectetur</li>
+      <li><i class="icon-link"></i> Provident sit aliquid a consequuntur</li>
+    </ul>
+  </nav>
+  <dl>              <!--Description list -->
+    <dt>Nafn</dt>
+      <dd>Aron Frosti Davíðsson</dd>
+    <dt>Tölvupóstur</dt>
+      <dd>aron.frosti.davidsson@gmail.com</dd>
+    <dt>Vefhönnun</dt>
+      <dd>VEFÞ2VHB5AU, tölvubraut Tækniskólans</dd>
+  </dl>
+</footer>
+
+<input type="checkbox" id="chatToggle" class="chat-toggle">
+<label for="chatToggle" class="chat-button"><span class="icon-bubble2"></span></label>
+
+<!-- Chatbox code -->
+<div class="chatbox">
+  <div class="chat-content">
+    <form action="get">
+      <!-- Name Form -->
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+      <!-- Email Form -->
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+      <!-- Textbox Form -->
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" placeholder="Type your message here" required></textarea>
+
+      <!-- Submit Button -->
+      <button type="submit">Send</button>
+    </form>
+  </div>
+</div>
+
+  <p class="center">&copy 2024</p>
+</body>
+</html>
+

@@ -1,0 +1,293 @@
+f/*@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap')*/
+
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-top: 0px;
+}
+
+header h1 {
+    padding: 15px;
+}
+
+.top-margin {
+    margin-top: 1rem;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+img {
+    margin: auto;
+}
+
+.center {
+    display: grid;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.value {
+    text-align: center;
+}
+
+.landing {
+    display: grid;
+    grid-template-columns: 1fr 0.60fr;
+    align-items: center;
+    text-align: center;
+}
+
+@media screen and (min-width:1rem) {
+    .landing {
+        grid-template-columns: 1fr;
+    }
+
+    body {
+        max-width: 100%;
+        margin: auto;
+        padding: 0.25rem;
+    }
+
+    .rammi {
+        text-align: center;
+    }
+} 
+
+@media screen and (min-width:48rem) {
+    .landing {
+        grid-template-columns: 1fr 0.60fr;
+    }
+} 
+
+.background_banner {
+    background-color: var(--background-banner);
+    padding: 1rem;
+    margin-bottom: 5px;
+}
+
+.rammi div {
+    border: 1px solid var(--nc-tx-2);
+}
+
+input[type="text"], input[type="email"], input[type="password"], input[type="tel"], textarea {
+    width: 100%; /* Set input width to 100% of the container */
+    padding: 10px; /* Add padding for better appearance */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.nav {
+    margin: 10px 0px 10px 0px;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    background-color: var(--nc-lk-1);
+    max-width: 100%;
+}
+
+header {
+    margin-bottom: 0px;
+}
+
+.dropdown-content {
+    display: none;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.max-80 {
+    max-width: 80%;
+}
+
+.store_img {
+    width: 100%;
+    height: 100%;
+}
+
+.site-header {
+    padding: 4px 0px 4px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.stretch-button {
+    width: 90%;
+    margin: 0 5%; /* This will add a 5% margin on both sides, centering the button */
+    box-sizing: border-box; /* This is to include padding and border in the width */
+    /* This is to make the button stretch to the full width of the parent element */
+    display: block;
+}
+
+.semi-small-form {
+    width: 75%;
+    margin: 0 auto;
+  }
+
+  @media screen and (min-width: 48rem) {
+   .semi-small-form {
+      width: 30%;
+    }
+  }
+
+/* Overlay styles */
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .overlay:target {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  /* Popup styles */
+  .popup {
+    padding: 20px;
+    background: lightblue;
+    border-radius: 5px;
+    width: 60%;
+    max-width: 600px; /* Limit the maximum width of the popup */
+    text-align: center;
+    position: relative;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .popup h2 {
+    margin-top: 0;
+    color: #333;
+    font-family: Tahoma, Arial, sans-serif;
+  }
+  .popup .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+  }
+  .popup .content {
+    margin-top: 20px;
+  }
+  
+  /* Button styles */
+  .button {
+    font-size: 1em;
+    padding: 10px 20px;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+    display: inline-block;
+    background-color: #37CB8D;
+    border-radius: 10%;
+    color: black;
+  }
+  .button:hover {
+    background: blue;
+    color: white;
+  }
+
+legend {
+    padding: 6px;
+}
+  
+/* ----------------------------------------- Hérna byrjar chatbox css ------------------------------------------------------- */
+.chat-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 9999;
+    background-color: var(--nc-d-lk-1);
+    padding: 10px;
+    border-radius: 25%;
+}
+
+.chatbox {
+    position: fixed;
+    bottom: -500px;
+    right: 15px;
+    z-index: 9998;
+    width: 300px;
+    background-color: #fff;
+    color: black;
+    padding: 20px;
+    border: 2px solid #b5b5b5;
+    border-radius: 10%;
+    transition: bottom .5s ease-in-out;
+}
+
+#chatToggle:checked ~ .chatbox {
+    bottom: 4.3rem;
+    transition: bottom .5s ease-in-out;
+}
+
+.chat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.close-chat {
+    cursor: pointer;
+}
+
+.chat-content label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.chat-content input,
+.chat-content textarea {
+    width: calc(100% - 20px);
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.chat-content textarea {
+    height: 100px;
+}
+
+.chat-content button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.chat-content button:hover {
+    background-color: #0056b3;
+}
+
+.chat-toggle {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}

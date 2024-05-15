@@ -1,0 +1,98 @@
+.light-row {
+  background-color: var(--light-row-color); /* Light row color */
+}
+
+.dark-row {
+  background-color: var(--dark-row-color); /* Dark row color */
+}
+
+table, th, td {
+  color: black;
+}
+
+tfoot {
+  color: black ;
+}
+
+/* Basic table styling */
+.table-container {
+  overflow-x: auto;
+  text-align: center;
+}
+
+.background_table {
+  /* background-color: var(--background-table); */
+  padding: 1rem;
+  padding-bottom: 0.25rem;
+  border: 2px solid black;
+}
+
+table tr {
+  width: 100%;
+  border-collapse: collapse;
+  color: black;
+}
+
+caption {
+  caption-side: top;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  text-align: center; /* Center align the caption */
+  color: var(--nc-d-bg-1);
+}
+
+/* Set light blue background for even rows */
+tbody tr:nth-child(even) {
+  background-color: var(--nc-d-lk-1); 
+}
+
+
+/* Set dark blue background for odd rows */
+tr:nth-child(odd) {
+  background-color: var(--nc-d-lk-2);
+}
+
+th, td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #333; /* Dark border */
+}
+
+thead  th {
+  background-color: var(--nc-d-lk-1); /* Dark header background */
+  /* color: var(--thead-text-color); Text color for headers */
+}
+
+tfoot td {
+  background-color: var(--nc-d-lk-2);
+  /* color: var(--dark-row-color); Text color for footer */
+}
+
+tfoot p {
+  text-align: center;
+  margin: 10px 0;
+}
+
+/* Media query for switching to grid layout below 760 pixels */
+@media screen and (max-width: 760px) {
+  thead {
+    display: none;
+  }
+
+  tr {
+    display: block;
+    margin-bottom: 10px;
+    border: 1px solid #dddddd;
+  }
+
+  td {
+    display: block;
+    text-align: left;
+  }
+
+  td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    width: 100%;
+  }
+}

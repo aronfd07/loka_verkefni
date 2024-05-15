@@ -1,0 +1,117 @@
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.rotate {
+    animation: rotate 10s linear infinite;
+}
+
+@keyframes logo-slide {
+    from {
+        opacity: 0;
+        transform: translate3d(500px, 0, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.logo-slide {
+    animation-name: logo-slide;
+    animation-duration: 4s;
+}
+
+@keyframes logo-pop {
+    0% {
+        opacity: 0;
+        transform: rotate(0deg); /* Start with no rotation */
+    }
+    50% {
+        opacity: 0;
+        transform: scale3d(0.3, 0.3, 0.3) rotate(0deg); /* Scale down without rotation */
+    }
+    90% {
+        opacity: .8;
+        transform: scale3d(2, 2, 2) rotate(90deg); /* Scale up and rotate 90 degrees */
+    }
+    100% {
+        opacity: 1;
+        /* No rotation specified here */
+    }
+}
+
+.logo-pop {
+    animation: logo-pop 3s forwards;
+    transform: rotate(90deg); /* Rotate by 90 degrees after animation */
+}
+
+/* Define your new animation with a different name */
+@keyframes my-logo-pop {
+    0% {
+        opacity: 0;
+        transform: scale3d(0.3, 0.3, 0.3) rotate(0deg); /* Start with scale down without rotation */
+    }
+    90% {
+        opacity: .8;
+        transform: scale3d(2, 2, 2) rotate(90deg); /* Scale up and rotate 90 degrees */
+    }
+    100% {
+        opacity: 1;
+        /* No rotation specified here */
+    }
+}
+
+/* Assign the new animation to a different class */
+.my-logo-pop {
+    animation: my-logo-pop 3s forwards;
+    transform: rotate(90deg); /* Rotate by 90 degrees after animation */
+    margin: 0 auto; /* Center horizontally */
+    display: block; /* Ensure it's a block element for margin:auto to work */
+    width: 100px; /* Set width */
+    height: 100px; /* Set height to match width */
+    /* Adjust width and height as needed */
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(100%); /* Start off-screen to the right */
+    }
+    100% {
+        transform: translateX(-400%); /* End off-screen to the left */
+    }
+}
+
+.scrolling-text-container {
+    font-size: 2.5rem;
+    max-width: 80%;
+    height: 80px; /* Adjust container height */
+    overflow: hidden; /* Hide the overflow of the scrolling text */
+    margin: 0 auto;
+}
+
+.scrolling-text-container-border {
+    font-size: 2.5rem;
+    max-width: 80%;
+    height: 80px; /* Adjust container height */
+    overflow: hidden; /* Hide the overflow of the scrolling text */
+    margin: 0 auto;
+    border: 2px solid black;
+    background-color: #ECD098;
+}
+
+.scrolling-text {
+    white-space: nowrap; /* Prevent text from wrapping */
+    animation: scroll-left 20s linear infinite; /* Adjust animation duration as needed */
+    opacity: 1; /* Ensure text is visible */
+}
+
+.col-gap {
+    display: flex;
+    column-gap: 100rem;
+}

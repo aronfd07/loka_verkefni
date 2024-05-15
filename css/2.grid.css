@@ -1,0 +1,94 @@
+main, footer {
+    margin: 0.5rem;
+}
+
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6 {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.col-1, .col-2 p, .col-3 p, .col-4 p, .col-5 p, .col-6 p {
+    /*border: 1px solid var(--nc-tx-2);*/
+    text-align: center;
+}
+
+.col-1, .col-2 div, .col-3 div, .col-4 div, .col-5 div, .col-6 div {
+    /* border: 1px solid var(--nc-tx-2); */
+    margin: 0.75rem;
+}
+
+.col-2_header {
+    display: grid;
+    grid-template-columns: 1fr 0.5fr;
+}
+
+.center_photo {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+/* spjaltölvur 760px */
+@media screen and (min-width:48rem) {
+    .col-1 {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        grid-row: 1rem;
+    }
+
+    .col-2, .col-4 {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        grid-row: 1rem;
+    }
+
+    .col-3, .col-6 {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1rem;
+        grid-row: 1rem;
+    }
+} 
+
+/* spjald - fartölvu 960px */
+@media screen and (min-width:60rem) {
+    main, footer {
+        max-width: 60rem;
+        margin: 0 auto;
+    }
+
+    .col-1 {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        grid-row: 1rem;
+    }
+
+    .col-2 {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        grid-row: 1rem;
+    }
+    
+    .col-3 {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        grid-row: 1rem;
+    }
+
+    .col-4 {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+        grid-row: 1rem;
+    }
+
+    .col-5 {
+        grid-template-columns: repeat(5, 1fr);
+        gap: 1rem;
+        grid-row: 1rem;
+    }
+
+    .col-6 {
+        grid-template-columns: repeat(6, 1fr);
+        gap: 1rem;
+        grid-row: 1rem;
+    }
+} 

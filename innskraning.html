@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="HTML og CSS grunnur">
+  <meta name="author" content="GJG">
+  <title>Sölusíða</title>
+  <!-- <link rel="stylesheet" href="css/2.grid.css">
+  <link rel="stylesheet" href="css/1.new.css">
+  <link rel="stylesheet" href="css/table.css">
+  <link rel="stylesheet" href="css/custom.css">
+  <link rel="stylesheet" href="css/4.nav.css">
+  <link rel="stylesheet" href="css/harmonika.css">
+  <link rel="stylesheet" href="css/3.icomoon.css">
+  <link rel="stylesheet" href="css/animation.css"> -->
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="icon" type="image/svg" href="images/rwd-icon.svg">
+</head>
+
+<body>
+  <nav class="topnav">
+    <input type="checkbox" class="menuinput" id="toggle">
+    <label for="toggle" class="menulabel"> &#9776; </label>
+      <section class="topmenu">
+          <a href="index.html"><span class="icon-home"></span> Forsíða</a>
+          <a href="solusida.html"><span class="icon-coin-dollar"> </span>Sölusíða</a>
+          <a href="#"><span class="icon-user"> </span>Innskráning</a>
+          </div>
+      </section>
+  </nav>
+
+  <form action="" class="semi-small-form">
+    <fieldset>
+        <div class="my-logo-pop"><span class="icon-teikning-logo"></span></div>
+
+        <div>
+        <label for="fnafn">Nafn</label>
+        <br>
+        <input type="text" id="nafn" name="fnafn" placeholder="Fullt nafn" required>
+        </div>
+
+        <div>
+        <label for="fpostur">Email</label>
+        <br>
+        <input type="email" id="postur" name="fpostur" placeholder="example@gmail.com" required>
+        </div>
+
+        <div>
+        <input type="submit" value="Login" class="stretch-button">
+        </div>
+    </fieldset>
+  </form>
+
+  <!-- Popup/Modal window -->
+  <div id="popup1" class="overlay">
+    <div class="popup">
+      <a class="close" href="#">&times;</a>
+      <form action="">
+        <fieldset>
+          <legend>Nýskráning</legend>
+    
+          <div>
+            <label for="fnafn">Nafn</label>
+            <br>
+            <input type="text" id="nafn" name="fnafn" placeholder="Fullt nafn" required>
+          </div>
+    
+          <div>
+            <label for="fsimi">Símanúmer</label>
+            <br>
+            <input type="tel" id="simi" name="fsimi" placeholder="123 4567" required>
+          </div>
+    
+          <div>
+            <label for="fpostur">Nafn</label>
+            <br>
+            <input type="email" id="postur" name="fpostur" placeholder="example@gmail.com" required>
+          </div>
+    
+          <!-- <div>
+            <label for="dagsetning">Dagsetning</label>
+            <input type="date" id="dagur" name="dagsetning" required>
+          </div> -->
+    
+          <div>
+            <label for="fjoldi">Fjöldi</label>
+            
+            <select name="fjoldi" id="fjoldi" required>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
+            stykki
+          </div>
+    
+          <!-- <div>
+            <label for="argerd">Árgerð:</label>
+            <input type="checkbox" name="ar" value="1965"> 1965
+            <input type="checkbox" name="ar" value="1965"> 1985
+          </div>
+    
+          <div>
+            <label for="litur">Litur: </label>
+            
+            <label for="raudur">Rauður</label>
+            <input type="radio" id="raudur" name="litur" value="raudur">
+    
+            <label for="svartur">Svartur</label>
+            <input type="radio" id="svartur" name="litur" value="svartur">
+          </div> -->
+    
+          <div>
+            <label for="athugasemdir">Athugasemdir<br></label>
+            <textarea name="athugasemdir" id="athugasemd" cols="30" rows="5"></textarea>
+          </div>
+    
+          <div>
+            <input type="submit">
+            <input type="reset">
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+
+  <input type="checkbox" id="chatToggle" class="chat-toggle">
+  <label for="chatToggle" class="chat-button"><span class="icon-bubble2"></span></label>
+
+  <!-- Chatbox code -->
+  <div class="chatbox">
+    <div class="chat-content">
+      <form action="get">
+        <!-- Name Form -->
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+        <!-- Email Form -->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+        <!-- Textbox Form -->
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" placeholder="Type your message here" required></textarea>
+
+        <!-- Submit Button -->
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </div>
+
+  <hr>
+
+  <footer class="container col-3">
+    <nav>
+      <ul>
+        <li><i class="icon-link"></i> Eveniet ducimus pariatur voluptate</li>
+        <li><i class="icon-link"></i> Vitae animi, sed provident fuga</li>
+        <li><i class="icon-link"></i> Lorem ipsum dolor sit amet consectetur</li>
+        <li><i class="icon-link"></i> Provident sit aliquid a consequuntur</li>
+      </ul>
+    </nav>
+    <nav>
+      <ul>
+        <li><i class="icon-link"></i> Eveniet ducimus pariatur voluptate</li>
+        <li><i class="icon-link"></i> Vitae animi, sed provident fuga</li>
+        <li><i class="icon-link"></i> Lorem ipsum dolor sit amet consectetur</li>
+        <li><i class="icon-link"></i> Provident sit aliquid a consequuntur</li>
+      </ul>
+    </nav>
+
+    <dl>              <!--Description list -->
+      <dt>Nafn</dt>
+        <dd>Aron Frosti Davíðsson</dd>
+      <dt>Tölvupóstur</dt>
+        <dd>aron.frosti.davidsson@gmail.com</dd>
+      <dt>Vefhönnun</dt>
+        <dd>VEFÞ2VHB5AU, tölvubraut Tækniskólans</dd>
+    </dl>
+  </footer>
+
+</body>
+</html>

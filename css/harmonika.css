@@ -1,0 +1,72 @@
+/* (A) HIDE CHECKBOX & CONTENT */
+.a-check {
+  display: none; 
+}
+
+.a-content {
+  max-height: 0;
+  overflow: hidden; 
+}
+
+/* (B) SHOW CONTENT ON CHECKED */
+.a-check:checked ~ .a-content {
+  max-height: 500px;
+  overflow: auto; 
+}
+
+.a-content {
+  transition: all 0.5s;
+}
+
+/* (C) COSMETICS */
+/* (C1) WRAPPER */
+.a-tab {
+  max-width: 100%; 
+}
+
+.margin_tab {
+  margin: 1rem;
+  border: 2px solid var(--nc-d-bg-1) ;
+  padding: 1rem;
+  margin-top: 5px;
+}
+
+/* (C2) LABEL */
+.a-label {
+  display: block;
+  font-weight: 700; cursor: pointer;
+  background: var(--nc-d-lk-2);
+  position: relative; /* Add position relative for arrow */
+}
+
+.a-label p {
+  padding: 20px;
+}
+
+/* (C3) LABEL ARROW */
+.a-label::after {
+  display: block; content: "\25b6";
+  position: absolute; right: 10px; top: 50%; transform: translateY(-50%);
+  transition: transform 0.3s ease; /* Add transition */
+}
+
+/* (C4) CONTENT */
+.a-check:checked ~ .a-content {
+  padding: 10px;
+  background: none; /* Removed white background */
+}
+
+/* Rotate arrow when checked */
+.a-check:checked ~ .a-label::after {
+  transform: translateY(-50%) rotate(90deg); /* Rotate arrow */
+}
+
+/* (X) INFO SNIPPET */
+#cbinfo {
+  padding: 10px; margin-top: 40px;
+  font-weight: 700; text-align: center;
+}
+#cbinfo a {
+  text-decoration: none; padding: 5px;
+  color: #fff; background: #a91616;
+}
